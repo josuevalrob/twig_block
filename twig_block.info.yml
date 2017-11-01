@@ -1,0 +1,5 @@
+name: Twig Module
+type: module
+description: Custom module for add your own blocks with a twig template
+core: 8.x
+package: josuevalrob

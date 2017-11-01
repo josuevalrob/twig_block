@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Contains twig_block.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+// 
+/**
+ * Implements hook_help().
+ */
+function twig_block_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the twig_block module.
+    case 'help.page.twig_block':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('custom module to add your own blocks') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+   
+// \Drupal::service('module_installer')->install(['page_manager_ui']);
+
+function twig_block_theme($existing, $type, $theme, $path) {
+
+
+$variables = array(
+    'bloque' =>array(
+      'variables' => array(
+                  'title' => 'Default title',
+                  'description' => null
+                  ),
+      'template' => 'bloque',
+    ),             
+  );
+
+  return $variables;
+
+
+}
